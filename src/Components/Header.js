@@ -1,51 +1,50 @@
 import React, { Component } from 'react';
 import ParticlesBg  from "particles-bg";
+// import BackgroundSlider from 'react-background-slider'
+
 
 class Header extends Component {
   render() {
 
-    if(this.props.data){
-       var project = this.props.data.project;
-       var github = this.props.data.github;
-      var name = this.props.data.name;
-      var description= this.props.data.description;
-      var city= this.props.data.address.city;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-      })
-    }
+   const linkedIn = 'temporary placeholder for linkedin';
 
     return (
       <header id="home">
-      <ParticlesBg type="circle" bg={true} />
+      {/* <ParticlesBg type="circle" bg={true} /> */}
       <nav id="nav-wrap">
          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" className="nav">
             <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#contact">Contact</a></li>
+            <li><a className="smoothscroll" href="#vision">Mission</a></li>
+            <li><a className="smoothscroll" href="#team">Team</a></li>
+            {/* <li><a className="smoothscroll" href="#contact">Contact</a></li> */}
          </ul>
       </nav>
 
       <div className="row banner">
       
          <div className="banner-text">
-            <h1 className="responsive-headline">{name}</h1>
-            <h3>{description}.</h3>
-            <hr />
-            <ul className="social">
-               <a href={project} className="button btn project-btn"><i className="fa fa-book"></i>Project</a>
-               <a href={github} className="button btn github-btn"><i className="fa fa-github"></i>Github</a>
-            </ul>
+            <img src="../images/templogo.png"></img>
+            <h1 className="responsive-headline">BORUS</h1>
+            <h3>"Bring exposure to traders and trading knowledge to users, focused on human connection and camaraderie."</h3>
+            {/* <h3>The problem BORUS aims to solve is the limited options for inexperienced and/or busy investors; doing all of the work and management on their own and weighing risk by themselves, or putting all of their trust and money into a white collar advisory firm.</h3>
+            <br></br>
+            <br/>
+            <br/>
+            <h3>Our Mission</h3>
+            <h3>To demonstrate the value of interdependence and promote shared prosperity, Life, Liberty, and the pursuit of a better investment portfolio.</h3>
+       */}
+            {/* <hr /> */}
+            {/* <ul className="social">
+               <a href={linkedIn} className="button btn project-btn"><i className="fa fa-linkedin"></i>LinkedIn</a>
+            </ul> */}
          </div>
       </div>
 
       <p className="scrolldown">
-         <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+         <a className="smoothscroll" href="#team"><i className="icon-down-circle"></i></a>
       </p>
 
    </header>
